@@ -1,0 +1,58 @@
+Bb:
+  - 2-furoic_acid
+  - Ketone_derivative
+  - HMF
+  - Caffeine
+  - Ascorbic_acid
+  - Dehydroabietic_acid
+  - Quinine
+  - Shikimic_acid
+  - Flavanone
+  - Cinnamaldehyde
+  - Tryptophan
+  - Geraniol
+  - Nicotine
+  - Itaconic_acid
+  - Carvone
+  - Coniferyl_alcohol
+  - Levullinic_acid
+  - Carotene
+  - 4,6-Dimethyl-alfa-pyrone
+CP:
+  - 2-hydroxy-5-nitrobenzaldehyde
+  - Propylamine
+  - DABCO
+  - Potassium_cyanide
+  - Rawal_diene
+  - Tetrachloroisophthalodinitrile
+  - Propiolic_acid
+  - Carveol
+  - Dimethylamine
+  - 1,3-dimethylbarbituric_acid
+  - 2-pyridineacetonitrile
+  - 1-azidoadamantane
+  - Morpholine
+  - Dimethyl_fumarate
+  - Cyclohexyl_isocyanide
+  - 4-methoxyphenyl_isocyanide
+  - Trimethylsilyl_cyanide
+  - Ph-maleimide
+  - Isoprene
+Solvent:
+  - ACN
+  - DMF
+Electrode:
+  - Carbon
+  - Platinum
+Additives:
+  - Ptsoh
+  - Formic_acid
+  - CsCO3
+  - Triethylamine
+  - NiCl2
+  - CuCl2
+  - Pd(OAc)2
+  - Dy(OTf)3
+  - Nothing
+Prior_score:
+  - 0.99999
