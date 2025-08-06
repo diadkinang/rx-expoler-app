@@ -74,7 +74,10 @@ st.divider()
 
 if st.session_state.bounds_file_loaded :
     selection = st.segmented_control(
-        label="", options=["💾 Constructor", "📊 Feature importance", "🧪 Most probable reactions", "📈 Scoring"], selection_mode="single", default="📈 Scoring"
+        label="", 
+        options=["💾 Constructor", "📊 Feature importance", "🧪 Most probable reactions", "📈 Scoring"], 
+        selection_mode="single", 
+        default="💾 Constructor"
     )
     st.session_state.segmented_selection = selection
 
