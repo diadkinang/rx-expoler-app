@@ -5,6 +5,7 @@ Modified: 31.05.2023
 """
 #Import libraries
 import argparse
+import os
 import pandas as pd
 import numpy as np
 import random
@@ -80,6 +81,7 @@ def target_encode (X_train, X_test, Y_train, search_space, categorial_cols, min_
 X_train_encoded, X_test_encoded = target_encode(X_train, X_test, Y_train, search_space, categorial_cols=categorical_cols)
 print('Encoding...done!')
 
+os.makedirs("ite_10", exist_ok=True)
 
 X_test_encoded.to_csv('ite_10/encoded_search_space_10_0.4.txt', index=False, sep='\t')
 X_train_encoded.to_csv('ite_10/encoded_training_data_10_0.4.txt', index=False, sep='\t')
@@ -166,6 +168,14 @@ df1_class = pd.DataFrame(class_prob_training)
 
 df_class.to_csv('ite_10/Predicted_prob_search_space_10_0.4.txt', index=None, sep='\t')
 df1_class.to_csv('ite_10/Predicted_prob_training_data_10_0.4.txt', index=None, sep='\t')
+
+predicted_class = np.argmax(class_1_prob, axis=1)
+
+X_test_df = X_test.copy()
+X_test_df["Prediction"] = predicted_class
+X_test_df["Prediction_0"] = class_1_prob[:, 0]
+X_test_df["Prediction_1"] = class_1_prob[:, 1]
+X_test_df.to_csv('Predictions.txt', index=None, sep='\t')
 
 #Generation of random numbers
 def random_value_in_interval(nums: 'prob_values') -> list:

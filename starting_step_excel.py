@@ -48,12 +48,10 @@ with open("all_possible_combinations.txt", "w") as output:
         s = '\t'.join(map(str, row))
         output.write(s + '\n')
 
-
 # Write training data sample
-with open("training_data.txt", "w") as output:
+with open("training_data_sample.txt", "w") as output:
     header_row = "\t".join(headers)
     output.write(header_row + '\n')
     for row in random_state:
         s = '\t'.join(map(str, row))
         output.write(s + '\n')
-

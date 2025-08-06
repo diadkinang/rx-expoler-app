@@ -18,7 +18,7 @@ np.random.seed(6)
 random_state = np.random.seed(6)
 
 # Import search space file from yaml file
-headers = ["Bb", "CP", "Electrodes", "Solvent", "Additives", "Prior_score"]
+headers = ["Bb", "CP", "Solvent", "Electrode", "Additives", "Prior_score"]
 with open('Boundaries.yaml', 'r') as pd.DataFrame:
     try:
         input_all_reactions = yaml.safe_load(pd.DataFrame)
@@ -29,6 +29,8 @@ with open('Boundaries.yaml', 'r') as pd.DataFrame:
     random_state = random.sample(combinations, k=20)
     print(random.sample(combinations, k=20))
     with open("all_possible_combinations1.txt", "w") as output:
+        s = "\t".join(map(str, headers))
+        output.write(s + '\n')
         for row in combinations:
             s = "\t".join(map(str, row))
             output.write(s + '\n')
